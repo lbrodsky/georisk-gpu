@@ -1,0 +1,6 @@
+# GeoRisk GPU System Overview
+OS: Linux: Ubuntu 24 
+... 
+
+OS: Windows 11 
+... 
