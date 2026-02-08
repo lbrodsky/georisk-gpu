@@ -1,4 +1,4 @@
-# GeoGisk GPU Computing Workstation
+# GeoRisk GPU Computing
 
 This repository documents the usage, setup, and best practices for the
 GeoRisk GPU-equipped workstation used for:
@@ -46,4 +46,3 @@ GeoRisk GPU-equipped workstation used for:
 
 ## Contact / Maintainers
 l****.bro****@n****.cuni.c*
- 
