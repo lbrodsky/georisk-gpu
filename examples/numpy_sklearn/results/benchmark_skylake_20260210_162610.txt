@@ -1,0 +1,25 @@
+CPU MULTI-CORE BENCHMARK REPORT
+============================================================
+Hostname: skylake
+Timestamp: 20260210_162610
+
+Configuration:
+  n_samples: 2000000
+  n_features: 50
+  noise: 0.1
+  pca_components: 10
+  n_estimators: 100
+  cv_folds: 3
+  n_jobs: 16
+  blas_threads: None
+  random_state: 42
+  single_run: True
+
+Results:
+  hostname: skylake
+  hardware: {'cpu_model': 'x86_64', 'physical_cores': 8, 'logical_cores': 16, 'cpu_max_frequency_mhz': 5100.0, 'total_memory_gb': 125.66, 'os': 'Linux', 'os_release': '6.8.0-90-generic', 'architecture': 'x86_64', 'python_version': '3.12.3'}
+  total_cpu_cores: 16
+  n_jobs_used: 16
+  blas_threads: 16
+  parameters: {'n_samples': 2000000, 'n_features': 50, 'noise': 0.1, 'pca_components': 10, 'n_estimators': 100, 'cv_folds': 3, 'n_jobs': 16, 'blas_threads': None, 'random_state': 42, 'single_run': True}
+  runs: {'single': {'n_jobs': 16, 'cv_scores': [0.03690894321328253, 0.04664625066236061, 0.0774129988443456], 'mean_r2': 0.05365606423999625, 'elapsed_seconds': 741.506861448288}}
