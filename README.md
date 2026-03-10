@@ -16,15 +16,13 @@ GeoRisk GPU-equipped workstation used for:
 - Storage: OS/SW: 2 TB; DATA: 2×10 TB
 - OS: Linux: Ubuntu 24 / Windows 11 
 
-## Quick Start
-1. Access the machine (SSH or desktop)
-2. Activate Python environment
-3. Verify GPU availability
-4. Run example workloads 
-
-## Access
-- SSH
-- Remote desktop (to be tested) 
+## Documentation 
+1. [System Overview](docs/system-overview.md)
+2. [Accessing the machine](docs/access.md)
+2. [Veryfing the system](docs/verifying_system.md) 
+3. [Data storage](docs/storage-data.md)
+4. [GPU Computing](docs/gpu-computing.md)
+5. [CPU Computing](docs/cpu-computing.md)
 
 ## Supported Workloads
 - Python (NumPy, SciPy, PyTorch)
