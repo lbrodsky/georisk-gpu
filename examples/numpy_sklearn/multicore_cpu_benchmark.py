@@ -13,7 +13,7 @@ Models used:
 - Cross-validation → multiplies CPU load
 
 Usage:
-$ python multicore_cpu_benchmark.py \
+$ python3 multicore_cpu_benchmark.py \
   --n-samples 2000000 \
   --n-features 50 \
   --noise 0.1 \
