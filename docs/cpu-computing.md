@@ -195,6 +195,32 @@ KFold(
 
 The benchmark explicitly measures this effect.
 
+--- 
+
+# OpenMPI paralelization 
+```
+mpirun --version
+```
+
+Create a simple MPI test:
+```
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(&argc, &argv);
+    printf("Hello from MPI!\n");
+    MPI_Finalize();
+    return 0;
+}
+```
+
+Compile & run:
+
+```
+mpicc test.c -o test
+mpirun -np 4 ./test
+```
 
 --- 
 

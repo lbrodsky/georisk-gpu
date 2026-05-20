@@ -21,4 +21,17 @@ deactivate
 
 ## 2. Docker 
 
-TODO: install and test. 
+Docker installed (version 29.5). 
+
+```
+sudo docker run hello-world
+```
+Installation working. To be tested in more operation. 
+
+Check running dockers: 
+```
+systemctl status docker
+```
+docker ps
+docker stop <container_id>
+```

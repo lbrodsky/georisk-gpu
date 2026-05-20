@@ -21,7 +21,7 @@ GeoRisk GPU-equipped workstation.
 
 ## Computation tasks: 
   GPU-accelerated deep learning (PyTorch, CUDA)
-- CPU-based scientific computing (NumPy, JobLib, MPI)
+- CPU-based scientific computing (NumPy, JobLib, OpenMPI) 
 - Python and C++ development
 - Remote access via SSH
 

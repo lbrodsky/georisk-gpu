@@ -9,9 +9,9 @@ This document explains how to run **GPU-accelerated scientific workloads** on th
 ## Python GPU libraries
 
 Common GPU-enabled libraries:
-* PyTorch
 * CUDA
-* TODO: TensorFlow 
+* PyTorch
+* To be later installed TensorFlow (TF does not yet support CIDA 13!) 
 
 
 # Verify GPU Availability
@@ -37,6 +37,7 @@ Expected output:
 True
 NVIDIA RTX PRO 6000 Blackwell Max-Q
 ```
+
 
 ---
 
