@@ -28,10 +28,15 @@ sudo docker run hello-world
 ```
 Installation working. To be tested in more operation. 
 
+
 Check running dockers: 
+
 ```
 systemctl status docker
 
+```
+
+Stop docker: 
 ```
 docker ps
 
