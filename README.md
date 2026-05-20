@@ -17,7 +17,7 @@ GeoRisk GPU-equipped workstation.
 3. [Data storage](docs/storage-data.md)
 4. [GPU Computing](docs/gpu-computing.md)
 5. [CPU Computing](docs/cpu-computing.md)
-6. [Virtual computing](docs/virtual_env.md)
+6. [Virtual environmnets](docs/virtual_env.md)
 
 ## Computation tasks: 
   GPU-accelerated deep learning (PyTorch, CUDA)
@@ -34,9 +34,12 @@ GeoRisk GPU-equipped workstation.
 - CPU scientific computing
 
 
-## Workstation Usage
-- Calendar (https://calendar.google.com/calendar/u/0?cid=Y19kNGVjMjNiYmJkNGJiOWFmMWM4OWRjMDEyOGFjMTE2MjMwMWEzZDY2YzAwMzVjMDAxYzViZjU2YTkxNTBiM2RiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) 
-- Storage and cleanup 
+## Workstation Usage Calendar
+
+GPU workstation occupancy calendar:
+
+[Open Google Calendar](https://calendar.google.com/calendar/u/0?cid=Y19kNGVjMjNiYmJkNGJiOWFmMWM4OWRjMDEyOGFjMTE2MjMwMWEzZDY2YzAwMzVjMDAxYzViZjU2YTkxNTBiM2RiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
+
 - Long-running jobs: reprot in calendar 
 
 ## Contact / Maintainers

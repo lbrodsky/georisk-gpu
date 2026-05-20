@@ -21,7 +21,11 @@ The workstation is configured as a dual-boot system:
 | Windows 11 | Visualization, desktop workflows, testing |
 
 ## 3. Linux Environment (Ubuntu 24)
-Ubuntu is the primary environment for scientific workloads.
+Ubuntu is the primary environment for multiuser scientific workloads
+Check who is logged! 
+```
+$ who
+```
 
 **Key software**
 - CUDA Toolkit
@@ -29,16 +33,16 @@ Ubuntu is the primary environment for scientific workloads.
 - Python3 (environments)
 - PyTorch (TODO: TensorFlow)
 - NumPy / SciPy 
-- TODO: OpenMP / MPI
-- CMake / GCC 
+- OpenMP 
+- GCC 
 - Git
 
 ## 4. Windows Environment (Windows 11) 
 Windows provides a secondary desktop environment for:
-- QGIS ?
-- Metashape? 
 - CUDA Toolkit
 - NVIDIA drivers
 - Python (environments)
 - PyTorch
 - NumPy / SciPy
+- Metashape? 
+

@@ -2,24 +2,8 @@
 
 This document explains how to run **multi-core CPU scientific workloads** on the GeoRisk GPU workstation.
 
-# Python Scientific Libraries
+Python Scientific Libraries: NumPy, SciPy, scikit-learn, PyTorch (CPU mode), XGBoost, pandas, rasterio / GDAL 
 
-Many Python scientific libraries automatically support **parallel execution**.
-Common CPU-intensive libraries:
-* NumPy
-* SciPy
-* scikit-learn
-* PyTorch (CPU mode)
-* XGBoost
-* pandas
-* rasterio / GDAL 
-
-Parallelization is typically implemented through:
-
-* multiprocessing (standard Python library)
-* joblib
-
----
 
 # Verify CPU Resources
 
@@ -67,11 +51,8 @@ The benchmark:
 * measures wall-clock execution time
 * compares single-core vs multicore performance
 
----
 
-# Running the Benchmark
-
-Basic example:
+**Running the Benchmark** 
 
 ```bash id="v4v3xj"
 python3 multicore_cpu_benchmark.py \
@@ -85,14 +66,14 @@ python3 multicore_cpu_benchmark.py \
   --random-state 42 
 ```
 
-Single benchmark run:
+**Single benchmark run** 
 
 ```bash id="eqx0h4"
 python3 multicore_cpu_benchmark.py \
     --single-run
 ```
 
-## Benchmark Parameters
+**Benchmark Parameters**
 
 | Parameter          | Description               |
 | ------------------ | ------------------------- |
@@ -106,7 +87,7 @@ python3 multicore_cpu_benchmark.py \
 
 
 
-# scikit-learn Parallelization
+# Scikit-learn Parallelization
 
 Many scikit-learn models support multicore execution.
 
@@ -119,27 +100,6 @@ RandomForestRegressor(
 )
 ```
 
----
-
-# Best Practice: Detect CPU Cores Automatically
-
-Recommended approach:
-
-```python id="zjlwmv"
-import os
-
-n_jobs = max(1, os.cpu_count() - 1)
-
-print(f"Using {n_jobs} CPU cores")
-```
-
-This ensures:
-
-* one core remains free
-* better system responsiveness
-* safer execution on shared machines
-
----
 
 # joblib Parallelization
 
@@ -177,24 +137,6 @@ Useful for:
 * Monte Carlo simulations
 * preprocessing pipelines
 
----
-
-# Cross-validation Scaling
-
-Cross-validation significantly increases CPU load because models are repeatedly trained.
-
-Example:
-
-```python id="p7f9je"
-KFold(
-    n_splits=3,
-    shuffle=True,
-    random_state=42
-)
-```
-
-The benchmark explicitly measures this effect.
-
 --- 
 
 # OpenMPI paralelization 
@@ -222,31 +164,3 @@ mpicc test.c -o test
 mpirun -np 4 ./test
 ```
 
---- 
-
-# CPU Performance Best Practices
-
-Recommended practices:
-
-* leave 1–2 CPU cores free
-* avoid thread oversubscription
-* monitor memory usage
-* use sufficiently large workloads
-* avoid excessive cross-validation folds
-* store temporary data on fast SSD storage
-
-Good practice:
-
-```python id="0ulwdi"
-n_jobs = max(1, os.cpu_count() - 1)
-```
-
-Avoid:
-
-```python id="m44jzx"
-n_jobs = -1
-```
-
-on shared machines.
-
----
