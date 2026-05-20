@@ -1,0 +1,52 @@
+{
+    "hostname": "GeoRisk",
+    "hardware": {
+        "cpu_model": "x86_64",
+        "physical_cores": 32,
+        "logical_cores": 64,
+        "cpu_max_frequency_mhz": 3550.0,
+        "total_memory_gb": 755.1,
+        "os": "Linux",
+        "os_release": "6.8.0-90-generic",
+        "architecture": "x86_64",
+        "python_version": "3.12.3"
+    },
+    "total_cpu_cores": 64,
+    "n_jobs_used": 63,
+    "blas_threads": 32,
+    "parameters": {
+        "n_samples": 2000000,
+        "n_features": 50,
+        "noise": 0.1,
+        "pca_components": 20,
+        "n_estimators": 200,
+        "cv_folds": 3,
+        "n_jobs": 63,
+        "blas_threads": 32,
+        "random_state": 42,
+        "single_run": false
+    },
+    "runs": {
+        "single_core": {
+            "n_jobs": 1,
+            "cv_scores": [
+                0.3846876101224984,
+                0.3028266179376189,
+                0.3549745808427708
+            ],
+            "mean_r2": 0.34749626963429603,
+            "elapsed_seconds": 21545.855006456375
+        },
+        "multi_core": {
+            "n_jobs": 63,
+            "cv_scores": [
+                0.22850360831384153,
+                0.3870461540609693,
+                0.2680659317844466
+            ],
+            "mean_r2": 0.2945385647197525,
+            "elapsed_seconds": 648.59299492836
+        }
+    },
+    "speedup": 33.21937667371232
+}
