@@ -1,7 +1,8 @@
 # GeoRisk GPU access
 ## 1. Desktop PC
 * Start PC with automatically run into Windows 11
-* Start linux requires to select boot source (F11) and than NVME#0: Samsung SSD 990 PRO 2TB
+* Start linux requires to select boot source (**press F11**) and than NVME#0: Samsung SSD 990 PRO 2TB
+![Linux Boot](./images/georisk_gpu_start_linux.png)
 
 ## 2. SSH Access 
 SSH allows secure remote login to the workstation.
