@@ -31,6 +31,8 @@ python3 train_unet_clouds.py \
 
 Code directory structure
 -------------------
+TODO: download data from https://www.kaggle.com/datasets/sorour/38cloud-cloud-segmentation-in-satellite-images/data 
+
 examples/python/pytorch/cloud_segmentation/
 │
 ├── train_unet_clouds.py
@@ -358,4 +360,4 @@ if __name__ == "__main__":
         exist_ok=True
     )
 
-    main(args)
+    main(args) 
