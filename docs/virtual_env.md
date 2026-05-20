@@ -31,7 +31,9 @@ Installation working. To be tested in more operation.
 Check running dockers: 
 ```
 systemctl status docker
+
 ```
 docker ps
+
 docker stop <container_id>
 ```
