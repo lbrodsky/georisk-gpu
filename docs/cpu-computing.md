@@ -2,15 +2,6 @@
 
 This document explains how to run **multi-core CPU scientific workloads** on the GeoRisk GPU workstation.
 
-Although the workstation contains a powerful GPU, many scientific workflows remain primarily **CPU-bound**, including: NumPy array operations, scikit-learn machine learning, geospatial preprocessing, etc. 
-
-The workstation contains:
-* AMD EPYC 9334
-* 32 CPU cores (64 virtual cores)
-* 768 GB RAM
-
---- 
-
 # Python Scientific Libraries
 
 Many Python scientific libraries automatically support **parallel execution**.
@@ -27,8 +18,6 @@ Parallelization is typically implemented through:
 
 * multiprocessing (standard Python library)
 * joblib
-* OpenMP (TODO: install)
-* BLAS / OpenBLAS (?)
 
 ---
 
@@ -80,40 +69,9 @@ The benchmark:
 
 ---
 
-# Benchmark Workflow
-
-The benchmark pipeline includes:
-
-```id="iqs8l3"
-Synthetic data generation
-    ↓
-StandardScaler
-    ↓
-PCA
-    ↓
-RandomForestRegressor
-    ↓
-Cross-validation
-```
-
-This creates computing workload combining:
-
-* linear algebra
-* multicore tree training
-* repeated model fitting
-* memory-intensive operations
-
----
-
 # Running the Benchmark
 
 Basic example:
-
-```bash id="bkj4gk"
-python3 multicore_cpu_benchmark.py
-```
-
-Large benchmark:
 
 ```bash id="v4v3xj"
 python3 multicore_cpu_benchmark.py \
@@ -124,8 +82,7 @@ python3 multicore_cpu_benchmark.py \
   --n-estimators 200 \
   --cv-folds 3 \
   --n-jobs 32 \
-  --blas-threads 32 \
-  --random-state 42
+  --random-state 42 
 ```
 
 Single benchmark run:
@@ -181,36 +138,6 @@ This ensures:
 * one core remains free
 * better system responsiveness
 * safer execution on shared machines
-
----
-
-# Best Practice: Limit BLAS Threads
-
-Scientific libraries may internally spawn threads through:
-
-* OpenMP
-* MKL
-* OpenBLAS
-
-Without thread control, **oversubscription** can occur.
-
-Recommended:
-
-```python id="zmdgko"
-import os
-
-os.environ["OMP_NUM_THREADS"] = "16"
-os.environ["MKL_NUM_THREADS"] = "16"
-os.environ["OPENBLAS_NUM_THREADS"] = "16"
-```
-
-The benchmark script includes:
-
-```python id="50o40s"
-set_blas_threads(n_threads)
-```
-
-to explicitly control BLAS/OpenMP parallelism.
 
 ---
 

@@ -17,24 +17,25 @@ GeoRisk GPU-equipped workstation.
 3. [Data storage](docs/storage-data.md)
 4. [GPU Computing](docs/gpu-computing.md)
 5. [CPU Computing](docs/cpu-computing.md)
+6. [Virtual computing](docs/virtual_env.md)
 
 ## Computation tasks: 
   GPU-accelerated deep learning (PyTorch, CUDA)
-- CPU-based scientific computing (NumPy, OpenMP, MPI)
+- CPU-based scientific computing (NumPy, JobLib, MPI)
 - Python and C++ development
-- Remote access via SSH and desktop 
+- Remote access via SSH
 
 ## Supported Workloads
 - Python (NumPy, SciPy, PyTorch)
-- C++ (OpenMP, CUDA, Eigen)
+- C++ (MPI, CUDA)
 
 ## Examples
 - GPU deep learning
 - CPU scientific computing
-- Performance benchmarks
+
 
 ## Workstation Usage
-- Calendar (https://calendar.google.com/calendar) 
+- Calendar (https://calendar.google.com/calendar/u/0?cid=Y19kNGVjMjNiYmJkNGJiOWFmMWM4OWRjMDEyOGFjMTE2MjMwMWEzZDY2YzAwMzVjMDAxYzViZjU2YTkxNTBiM2RiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) 
 - Storage and cleanup 
 - Long-running jobs: reprot in calendar 
 

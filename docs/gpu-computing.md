@@ -47,7 +47,7 @@ This repository contains a benchmark example demonstrating GPU computation with 
 Example location:
 
 ```id="l6df6p"
-examples/python/pytorch/gpu_benchmark.py
+examples/pytorch_gpu/gpu_benchmark.py
 ```
 
 The benchmark:
@@ -68,7 +68,7 @@ python examples/python/pytorch/gpu_benchmark.py
 Example:
 
 ```bash id="gcrhkg"
-python examples/python/pytorch/gpu_benchmark.py \
+python examples/pytorch_gpu/gpu_benchmark.py \
     --batch-size 4096 \
     --samples 500000 \
     --hidden-dim 8192 \
@@ -115,26 +115,6 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(device)
 ```
 
----
-
-# Best Practice: Mixed Precision (FP16)
-
-Modern NVIDIA GPUs support Tensor Core acceleration.
-
-PyTorch automatic mixed precision:
-
-```python id="vq80ef"
-with torch.cuda.amp.autocast():
-    outputs = model(inputs)
-```
-
-Benefits:
-
-* faster computation
-* lower GPU memory usage
-* improved throughput
-
----
 
 # GPU Memory Monitoring
 
