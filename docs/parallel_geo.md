@@ -7,7 +7,7 @@ Case:
 - per-scene satellite processing
 
 **Parallel raster tile processing** 
-```
+```python id="tmx96m"
 from multiprocessing import Pool
 import rasterio
 import numpy as np
@@ -36,7 +36,7 @@ Limitation of this approach is memory duplication.
 Case of: 
 - large rasters processed by windows/tiles.
 
-```
+```python id="tmx96m"
 import rasterio
 from rasterio.windows import Window
 from concurrent.futures import ProcessPoolExecutor
@@ -69,7 +69,8 @@ See:
 Brodský, L., Landa, M., Bouček, T., Pešek, O., & Halounová, L. (2026). The LUCAS dataset revisited: enhancing spatial representativeness for machine learning land cover mapping. International Journal of Digital Earth, 19(1). https://doi.org/10.1080/17538947.2026.2644671
  
  Full code with parallel processing of tiles over Europe: https://github.com/lbrodsky/LUCAS_representativeness/tree/main 
-```
+
+```python id="tmx96m"
 from joblib import Parallel, delayed 
 import multiprocessing
 
@@ -95,7 +96,7 @@ Case of:
 - xarray datasets,
 - chunked satellite imagery
 
-```
+```python id="tmx96m"
 import rioxarray
 import dask.array as da
 
@@ -120,7 +121,7 @@ print(mean_ndvi.values)
 Case of: 
 - any geospatial data tabulated 
 
-```
+```python id="tmx96m"
 from sklearn.ensemble import RandomForestClassifier
 
 clf = RandomForestClassifier(
@@ -137,7 +138,8 @@ Case of:
 - deep learning on raster data. 
 
 PyTorch automatically parallelizes tensor operations on the GPU. 
-```
+
+```python id="tmx96m"
 import torch
 
 # Select GPU if available

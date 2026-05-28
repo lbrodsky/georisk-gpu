@@ -2,7 +2,7 @@
 
 Linux access: 
 ```
-DATA1/ 
+data1/ 
 ├── users/ 
 │ ├── lukas/ 
 │ ├── samo/ 
@@ -17,4 +17,5 @@ DATA1/
 
 So far only the disk1 is formated using NTFS filessytem. It needs to me tested. It is for Win/Lin users. 
 
-TODO: DISK2 (ext4?) 
+DISK1: NTFS (Win, Lin)
+DISK2: ext4? (Linux) 
