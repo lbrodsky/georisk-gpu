@@ -1,4 +1,22 @@
 # Parallel geocompotuation
+Parallelization in GIS and remote sensing is based on dividing computation into smaller independent tasks that can run simultaneously on multiple CPU cores, GPUs, or distributed machines. 
+
+- Spatial decomposition (tiling): a 40,000 × 40,000 raster can be split into 512 × 512 or 2048 × 2048 tiles. 
+- Data locality. A core principle is to move computation to the data, not data to computation. Reading huge rasters repeatedly is expensive.
+- Chunking. Chunking means storing or processing data in blocks. 
+- Spatial dependency problem. Some operations require neighboring pixels/features. Examples: convolution filters, terrain derivatives or moving windows. Solution: add overlap around tiles. 
+
+**Typical pipeline:** 
+Storage -> Chunking/Tiling -> Parallel Scheduler -> CPU/GPU Workers ->  Merge Results
+
+**Central princiapls:** 
+- divide data spatially or temporally,
+- maximize independence between tasks,
+- minimize I/O,
+- process data in chunks,
+- manage spatial dependencies,
+- avoid memory overload,
+- use GPUs for array-heavy operations. 
 
 ### 1. Multiprocessing (CPU parallelism)
 Case: 
@@ -146,10 +164,10 @@ import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Create large tensor on GPU
-x = torch.rand((10000, 10000), device=device)
+x = torch.rand((3, 10000, 10000), device=device)
 
 # Parallel GPU computation
-result = torch.mean(x)
+result = torch.mean(x, dim=0) 
 
 print(result)
 print("Running on:", device)
