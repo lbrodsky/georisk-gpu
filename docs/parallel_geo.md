@@ -1,15 +1,10 @@
 # Parallel geocompotuation
 Parallelization in GIS and remote sensing is based on dividing computation into smaller independent tasks that can run simultaneously on multiple CPU cores, GPUs, or distributed machines. 
 
-- Spatial decomposition (tiling): a 40,000 × 40,000 raster can be split into 512 × 512 or 2048 × 2048 tiles. 
-- Data locality. A core principle is to move computation to the data, not data to computation. Reading huge rasters repeatedly is expensive.
-- Chunking. Chunking means storing or processing data in blocks. 
-- Spatial dependency problem. Some operations require neighboring pixels/features. Examples: convolution filters, terrain derivatives or moving windows. Solution: add overlap around tiles. 
-
 **Typical pipeline:** 
 Storage -> Chunking/Tiling -> Parallel Scheduler -> CPU/GPU Workers ->  Merge Results
 
-**Central princiapls:** 
+**Princiapls:** 
 - divide data spatially or temporally,
 - maximize independence between tasks,
 - minimize I/O,
@@ -17,6 +12,8 @@ Storage -> Chunking/Tiling -> Parallel Scheduler -> CPU/GPU Workers ->  Merge Re
 - manage spatial dependencies,
 - avoid memory overload,
 - use GPUs for array-heavy operations. 
+
+## Code examples: 
 
 ### 1. Multiprocessing (CPU parallelism)
 Case: 
@@ -135,7 +132,7 @@ mean_ndvi = ndvi.mean().compute()
 print(mean_ndvi.values)
 ```
 
-### 5. Parallel machine learning 
+### 5. Parallel machine learning with Sklearn 
 Case of: 
 - any geospatial data tabulated 
 
