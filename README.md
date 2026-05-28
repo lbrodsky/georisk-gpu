@@ -18,6 +18,7 @@ GeoRisk GPU-equipped workstation.
 4. [GPU Computing](docs/gpu-computing.md)
 5. [CPU Computing](docs/cpu-computing.md)
 6. [Virtual environmnets](docs/virtual_env.md)
+6. [Parallel geocomputing](docs/parallel_geo.md)
 
 ## Computation tasks: 
   GPU-accelerated deep learning (PyTorch, CUDA)
