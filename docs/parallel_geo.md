@@ -13,7 +13,7 @@ Storage -> Chunking/Tiling -> Parallel Scheduler -> CPU/GPU Workers ->  Merge Re
 - avoid memory overload,
 - use GPUs for array-heavy operations. 
 
-## Code examples: 
+## Code examples of CPU/GPU workers: 
 
 ### 1. Multiprocessing (CPU parallelism)
 Case: 
